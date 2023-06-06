@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OrderProcessor.Presentation": {
+      "commandName": "Project",
+      "commandLineArgs": "input1.stream 5"
+    }
+  }
+}

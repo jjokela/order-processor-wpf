@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\TestFiles\input1.stream" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\TestFiles\input1.stream">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderProcessor.Data\OrderProcessor.Data.csproj" />
+    <ProjectReference Include="..\OrderProcessor.Domain\OrderProcessor.Domain.csproj" />
+    <ProjectReference Include="..\OrderProcessor.Presentation\OrderProcessor.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>
